@@ -54,3 +54,5 @@ def word_guessing_game():
             break
         if "_" in current_status:
             print(f"UH-OH! You ran out of attempts! The word was: {unrevealed_word}")
+
+word_guessing_game()
