@@ -6,3 +6,13 @@ def choose_word():
              "penguin", "ostrich", "seagull", "sparrow", "vulture"]
     
     return random.choice(words)
+
+def word_ranking(word, guessed_letters):
+    present = ""
+    for letter in word:
+        if letter in guessed_letters:
+            present += letter 
+        else:
+            present += "_"
+
+    return present
