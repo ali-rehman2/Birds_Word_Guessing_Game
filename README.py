@@ -32,3 +32,6 @@ def word_guessing_game():
             print("You must enter a single letter.")
             continue  
 
+        if guess in guessed_letters:
+            print("You already guessed that letter.")
+            continue
