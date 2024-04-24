@@ -16,3 +16,12 @@ def word_ranking(word, guessed_letters):
             present += "_"
 
     return present
+
+def word_guessing_game():
+    unrevealed_word = choose_word()
+    guessed_letters = []
+    attempts = 3
+
+    print("Word Guessing Game")
+    print("******************")
+    print("Unrevealed Word:", word_ranking(unrevealed_word, guessed_letters))
