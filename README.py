@@ -25,3 +25,10 @@ def word_guessing_game():
     print("Word Guessing Game")
     print("******************")
     print("Unrevealed Word:", word_ranking(unrevealed_word, guessed_letters))
+
+    while attempts > 0:
+        guess = input("Guess a letter: ").lower()
+        if len(guess) != 1 or not guess.isalpha():
+            print("You must enter a single letter.")
+            continue  
+
