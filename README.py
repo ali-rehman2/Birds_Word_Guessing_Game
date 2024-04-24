@@ -38,4 +38,11 @@ def word_guessing_game():
 
         guessed_letters.append(guess)
 
-       
+        if guess not in unrevealed_word:
+            attempts -= 1
+            print(f"No letter '{guess}' occurs in the word.")
+            print(f"You have {attempts} attempts remaining.")
+        else:
+            occurrences = unrevealed_word.count(guess)
+            print(f"Letter '{guess}' occurs {occurrences} times.")
+        
