@@ -46,3 +46,11 @@ def word_guessing_game():
             occurrences = unrevealed_word.count(guess)
             print(f"Letter '{guess}' occurs {occurrences} times.")
         
+        current_status = word_ranking(unrevealed_word, guessed_letters)
+        print("Unrevealed Word:", current_status)
+
+        if "_" not in current_status:
+            print("Congrats! You guessed the bird!")
+            break
+        if "_" in current_status:
+            print(f"UH-OH! You ran out of attempts! The word was: {unrevealed_word}")
