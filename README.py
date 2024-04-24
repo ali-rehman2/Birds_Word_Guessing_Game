@@ -35,3 +35,7 @@ def word_guessing_game():
         if guess in guessed_letters:
             print("You already guessed that letter.")
             continue
+
+        guessed_letters.append(guess)
+
+       
