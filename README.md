@@ -1,0 +1,1 @@
+This is the OFFICIAL Final Project for INST126. The Final Project includes a Code Script for a Word Guessing Game which involves guessing 10 different types of Birds. This file comes along with an MIT License to ensure copyright safety. 
