@@ -4,11 +4,12 @@ import random
 
 def choose_word():
     words = ["chicken", "crow", "eagle", "hawk", "parrot", "peacock",
-             "penguin", "ostrich", "seagull", "sparrow", "vulture"]
+            "penguin", "ostrich", "seagull", "sparrow", "vulture"]
     
     return random.choice(words)
 
 def word_ranking(word, guessed_letters):
+    
     present = ""
     for letter in word:
         if letter in guessed_letters:
@@ -28,14 +29,20 @@ def word_guessing_game():
     print("Unrevealed Word:", word_ranking(unrevealed_word, guessed_letters))
 
     while attempts > 0:
+        
+        
         guess = input("Guess a letter: ").lower()
+        
+        
         if len(guess) != 1 or not guess.isalpha():
             print("You must enter a single letter.")
             continue  
 
+        
         if guess in guessed_letters:
             print("You already guessed that letter.")
             continue
+
 
         guessed_letters.append(guess)
 
@@ -51,9 +58,10 @@ def word_guessing_game():
         print("Unrevealed Word:", current_status)
 
         if "_" not in current_status:
-            print("Congrats! You guessed the bird!")
+            print("Congrats, You guessed the bird! You are ready to fly!")
             break
-        if "_" in current_status:
-            print(f"UH-OH! You ran out of attempts! The word was: {unrevealed_word}")
+
+    if "_" in current_status:
+            print(f"UH-OH! You ran out of attempts! Better chirp next time! The word was: {unrevealed_word}")
 
 word_guessing_game()
