@@ -1,15 +1,25 @@
 # The Ultimate Birds Word Guessing Game!
+#this is Colin, and I'd suggest adding comments to explain what you're doing! 
+#I'll get you started with docstrings for your functions
+#I would also highly recommend putting all your existing functions into one big one so you can create multiple
+    #rounds of your game! 
 
 import random
 
 def choose_word():
+    """
+    This function selects a random word from a list that you created.
+    """
     words = ["chicken", "crow", "eagle", "hawk", "parrot", "peacock",
             "penguin", "ostrich", "seagull", "sparrow", "vulture"]
     
     return random.choice(words)
 
 def word_ranking(word, guessed_letters):
-    
+    """
+    This function uses a conditional statement to check if the player's potential guess is correct / in the 
+    existing wordbank. If their guess isn't, it's displayed as an underscore.
+    """
     present = ""
     for letter in word:
         if letter in guessed_letters:
@@ -20,6 +30,10 @@ def word_ranking(word, guessed_letters):
     return present
 
 def word_guessing_game():
+    """
+    This function runs the guessing game, giving the player 3 attempts to guess the kind of bird
+    from your word bank.
+    """
     unrevealed_word = choose_word()
     guessed_letters = []
     attempts = 3
